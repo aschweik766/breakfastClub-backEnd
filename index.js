@@ -1,5 +1,5 @@
 const express = require("express");
-const dot = require('dotenv').config
+const dot = require('dotenv').config()
 const cors = require('cors')
 
 const methodOverride = require('method-override')
@@ -16,7 +16,7 @@ app.use(express.json())
 const controller = require('./controllers/router')
 
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3001
 app.listen(port, ()=> {
     console.log(`server running on port: ${port}`)
 });

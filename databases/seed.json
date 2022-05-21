@@ -12,14 +12,21 @@
         "image": "https://thispersondoesnotexist.com/image",
         "moonRising": "",
         "sunRising": "",
-        "venus": ""
+        "venus": "",
+        "datingPreferences": "",
+        "bio": "",
+        "interests": {
+            "first": "",
+            "second": "",
+            "third": ""
+        }
     },
     {
         "firstName": "Anika",
         "lastName": "Test1",
         "birthday": "05/05/1993",
-        "location": "New York City, NY",
-        "birthTime": "2:30 AM",
+        "location": "Atlanta, GA",
+        "birthTime": "6:30 PM",
         "email": "ashchweikhardwork@gmail.com",
         "userName":   "Test1",
         "password": "Test1",
@@ -27,14 +34,21 @@
         "image": "https://thispersondoesnotexist.com/image",
         "moonRising": "",
         "sunRising": "",
-        "venus": ""
+        "venus": "",
+        "datingPreferences": "",
+        "bio": "",
+        "interests": {
+            "first": "",
+            "second": "",
+            "third": ""
+        }
     },
     {
         "firstName": "Mo",
         "lastName": "Test2",
-        "birthday": "05/05/1993",
+        "birthday": "04/29/1999",
         "location": "New York City, NY",
-        "birthTime": "2:30 AM",
+        "birthTime": "5:30 AM",
         "email": "ashchweikhardwork@gmail.com",
         "userName":   "Test2",
         "password": "Test2",
@@ -42,7 +56,14 @@
         "image": "https://thispersondoesnotexist.com/image",
         "moonRising": "",
         "sunRising": "",
-        "venus": ""
+        "venus": "",
+        "datingPreferences": "",
+        "bio": "",
+        "interests": {
+            "first": "",
+            "second": "",
+            "third": ""
+        }
     },
     {
         "firstName": "Jet",
@@ -58,22 +79,34 @@
         "moonRising": "",
         "sunRising": "",
         "venus": "",
-        "datingPreferences": ""
+        "datingPreferences": "",
+        "bio": "",
+        "interests": {
+            "first": "",
+            "second": "",
+            "third": ""
+        }
     },
     {
-            "firstName": "Mena",
-            "lastName": "Test4",
-            "birthday": "12/25/1996",
-            "location": "Nashville, TN",
-            "birthTime": "9:30 AM",
-            "email": "ashchweikhardwork@gmail.com",
-            "userName":   "Test4",
-            "password": "Test4",
-            "zodiacSign": "",
-            "image": "https://thispersondoesnotexist.com/image",
-            "moonRising": "",
-            "sunRising": "",
-            "venus": "",
-            "datingPreferences": ""
+        "firstName": "Mena",
+        "lastName": "Test4",
+        "birthday": "12/25/1996",
+        "location": "Denver, CO",
+        "birthTime": "9:30 AM",
+        "email": "ashchweikhardwork@gmail.com",
+        "userName":   "Test4",
+        "password": "Test4",
+        "zodiacSign": "",
+        "image": "https://thispersondoesnotexist.com/image",
+        "moonRising": "",
+        "sunRising": "",
+        "venus": "",
+        "datingPreferences": "",
+        "bio": "",
+        "interests": {
+            "first": "",
+            "second": "",
+            "third": ""
+        }
     }
 ]

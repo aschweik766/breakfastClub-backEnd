@@ -20,6 +20,12 @@ const UserSchema = new mongoose.Schema(
         sunRising: String,
         venus: String,
         datingPreferences: String,
+        bio: String,
+        interests: {
+            first: String,
+            second: String,
+            third: String,
+        }
     },
     {timestamps: true}
 )

@@ -1,4 +1,4 @@
-const User = require('../databases/seed.json')
+const User = require('../models/user-model')
 const userData = require('../databases/seed.json')
     console.log(userData);
 
