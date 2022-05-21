@@ -8,7 +8,7 @@ const router = express.Router();
 
 //CRUD ROUTES//
 
-append.get("/", (req, res) => {
+router.get("/", (req, res) => {
     res.send('hello world')
 })
 
