@@ -17,14 +17,9 @@ const UserSchema = new mongoose.Schema(
         image: String,
         zodiacSign: String,
         moonRising: String,
-<<<<<<< HEAD
-        sun: String,
-        venus: String
-=======
         sunRising: String,
         venus: String,
         datingPreferences: String,
->>>>>>> cd1644e894d390797c13859da131a19d4815b7f4
     },
     {timestamps: true}
 )
