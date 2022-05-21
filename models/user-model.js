@@ -15,9 +15,11 @@ const UserSchema = new mongoose.Schema(
         userName:   String,
         password: String,
         image: String,
+        zodiacSign: String,
         moonRising: String,
         sunRising: String,
-        venus: String
+        venus: String,
+        datingPreferences: String,
     },
     {timestamps: true}
 )
