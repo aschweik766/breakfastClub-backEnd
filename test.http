@@ -1,9 +1,19 @@
-POST http://localhost:3001/signup
+POST http://localhost:3001/myaccount
 Content-Type: application/json
 
-{
-    "fullName": "Charnaye",
-    "username": "naye",
-    "email": "naye@gmail.com",
-    "password": "test"
-}
+  {
+        "firstName": "shelby",
+        "lastName": "Test",
+        "birthday": "01/05/2013",
+        "location": "Aurora, CO",
+        "birthTime": "12:30 PM",
+        "email": "ashchweikhardwork@gmail.com",
+        "userName":   "Test",
+        "password": "Test",
+        "interests": {
+            "first": "",
+            "second": "",
+            "third": ""
+        }
+    }
+

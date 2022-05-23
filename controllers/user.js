@@ -25,10 +25,10 @@ router.get("/myaccount", (req, res) => {
 
 //POST
 
-router.post("/", (req, res) => {
+router.post("/myaccount", (req, res) => {
     User.create(req.body)
     .then( () => {
-        res.redirect('/')
+        res.redirect('/myaccount')
     })
     .catch(console.error)
 })
