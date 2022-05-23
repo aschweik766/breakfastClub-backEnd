@@ -2,6 +2,8 @@
 const express = require('express');
 
 const User = require('../models/user-model')
+const SignUp = require('../models/signUpModel');
+const { request } = require('express');
 
 const router = express.Router();
 
@@ -29,6 +31,22 @@ router.post("/", (req, res) => {
         res.redirect('/')
     })
     .catch(console.error)
+})
+
+router.post('/signup', (req, res) => {
+    const signedUpUser= new SignUp({
+        fullName: request.body.fullName,
+        username: request.body.username,
+        email: request.body.email,
+        password: request.body.password
+    })
+    signedUpUser.save()
+    .then(data => {
+        res.json(data)
+    })
+    .catch(error => {
+        res.json(error)
+    })
 })
 
 
