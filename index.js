@@ -7,11 +7,12 @@ const cors = require('cors')
 const methodOverride = require('method-override')
 const userController = require('./controllers/user')
 
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
 app.use('/public', express.static(__dirname + 'public'))
 app.use(methodOverride('_method'))
 app.use(cors())
-app.use(express.urlencoded({extended: true}))
-app.use(express.json())
+
 
 
 app.use(userController)
