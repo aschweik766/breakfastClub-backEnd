@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
 //CREATE 
 
 //READ
-router.get("/user", (req, res) => {
+router.get("/myaccount", (req, res) => {
     const results = User.find({})
     results.then((user) => {res.send(user)})
 })
@@ -25,10 +25,10 @@ router.get("/user", (req, res) => {
 
 //POST
 
-router.post("/", (req, res) => {
+router.post("/myaccount", (req, res) => {
     User.create(req.body)
     .then( () => {
-        res.redirect('/')
+        res.redirect('/myaccount')
     })
     .catch(console.error)
 })
