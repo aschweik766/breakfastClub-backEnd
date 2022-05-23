@@ -1,8 +1,8 @@
-POST http://localhost:3001/myaccount
+PUT http://localhost:3001/edit/6289477951030ce11405bbe8
 Content-Type: application/json
 
   {
-        "firstName": "shelby",
+        "firstName": "Anne",
         "lastName": "Test",
         "birthday": "01/05/2013",
         "location": "Aurora, CO",

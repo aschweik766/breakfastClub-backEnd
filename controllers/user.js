@@ -52,6 +52,18 @@ router.post('/signup', (req, res) => {
 
 //UPATE
 
+
+router.put('/edit/:id', (req, res) => {
+    console.log(req.params.id)
+    console.log(req.body)
+    User.findByIdAndUpdate({_id: req.params.id}, req.body)
+    .then(data => 
+        User.find({}).then(data => {
+            res.json(data)
+        }))
+})
+
+
 // router.put()
 
 // router.delete()
