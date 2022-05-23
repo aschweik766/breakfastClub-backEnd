@@ -35,10 +35,10 @@ router.post("/", (req, res) => {
 
 router.post('/signup', (req, res) => {
     const signedUpUser= new SignUp({
-        fullName: request.body.fullName,
-        username: request.body.username,
-        email: request.body.email,
-        password: request.body.password
+        fullName: req.body.fullName,
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password
     })
     signedUpUser.save()
     .then(data => {

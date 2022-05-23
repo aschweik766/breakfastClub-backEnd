@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require('../databases/connection')
 
 const signUpTemplate = new mongoose.Schema(
     {
