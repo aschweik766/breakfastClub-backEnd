@@ -64,9 +64,8 @@ const StarChartSchema = new mongoose.Schema (
                 type: String,
                 default: "EN"
             },
-        },
-        description: "Astrological type for a subject."
         }
+    }
 )
 
 const StarChart = mongoose.model('StarChart', StarChartSchema);
