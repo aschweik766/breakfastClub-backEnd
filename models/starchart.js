@@ -5,27 +5,9 @@ const mongoose = require('../databases/connection')
 // Returns the birthchart of a subject in SVG format. Also includes the birthchart data and aspects in JSON.
 // Parameters to be insterted in the body:
 
-// name - The name of the person to get the birthchart for.
-// year - The year of b...
-// RapidAPI App
-// REQUIRED
-// Request URL
-// REQUIRED
-// Header Parameters
-// X-RapidAPI-Host
-// STRING
-// astrologer.p.rapidapi.com
-// REQUIRED
-// X-RapidAPI-Key
-// ENUM
-// REQUIRED
-// Request Body
-// Body
-// Schema
+
 const StarChartSchema = new mongoose.Schema (
     {
-        title: "Subject",
-        type:"object",
         properties: {
                 name: {
                     title: "Name",

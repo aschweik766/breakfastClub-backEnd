@@ -1,19 +1,64 @@
-PUT http://localhost:3001/edit/6289477951030ce11405bbe8
+POST http://localhost:3001/starchart
 Content-Type: application/json
 
   {
-        "firstName": "Anne",
-        "lastName": "Test",
-        "birthday": "01/05/2013",
-        "location": "Aurora, CO",
-        "birthTime": "12:30 PM",
-        "email": "ashchweikhardwork@gmail.com",
-        "userName":   "Test",
-        "password": "Test",
-        "interests": {
-            "first": "",
-            "second": "",
-            "third": ""
+        properties: {
+                name: {
+                    title: "Name",
+                    type: String,
+                    default: "Test"
+                    },
+        year: {
+                title: "Year",
+                type: Number,
+                default: 1990
+            },
+        month: {
+                title: "Month",
+                type: Number,
+                default: 6
+            },
+        day: {
+                title: "Day",
+                type: Number,
+                default: 16
+            },
+        hour: {
+                title: "Hour",
+                type: Number,
+                default: 10
+            },
+        minute: {
+                title: "Minute",
+                type: Number,
+                default: 10
+            },
+        longitude: {
+                title: "Longitude",
+                type: Number,
+                default: 12.4963655
+            },
+        latitude: {
+                title: "Latitude",
+                type: Number,
+                default: 41.9027835
+            },
+        city: {
+                title: "City",
+                type: String,
+                default: "Roma"
+            },
+        timezone: {
+                title: "Timezone",
+                type: String,
+                default:  "Europe/Rome"
+            },
+        language: {
+                title: "Language",
+                type: String,
+                default: "EN"
+            },
+        },
+        description: "Astrological type for a subject."
         }
-    }
 
