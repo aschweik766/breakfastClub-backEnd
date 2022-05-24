@@ -1,8 +1,7 @@
-PUT http://localhost:3001/starchart/edit/628d2431db03a616b047f2e7
+POST http://localhost:3001/starchart
 Content-Type: application/json
-
  
-{ "properties": {
+{
         "name": "Jaclene",
         "year": 1990,
         "month": 8,
@@ -14,5 +13,5 @@ Content-Type: application/json
         "city": "New York",
         "timezone": "Europe/Rome",
         "language": "EN"
-}
+
 }

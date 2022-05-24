@@ -1,7 +1,6 @@
 //User homepage: routes//
 const express = require('express');
 const StarChart = require('../models/starchart')
-const { request } = require('express');
 
 const router = express.Router();
 
@@ -16,7 +15,7 @@ router.get("/", (req, res) => {
 //READ
 router.get("/starchart", (req, res) => {
     const results = StarChart.find({})
-    results.then((chart) => {res.send(chart)})
+    results.then((chart) => res.send(chart))
 })
 
 //other routes to plan//
@@ -25,10 +24,10 @@ router.get("/starchart", (req, res) => {
 
 router.post("/starchart", (req, res) => {
     StarChart.create(req.body)
-    .then( () => {
-        res.redirect('/starchart')
-    })
-    .catch(console.error)
+        .then(() => {
+            res.redirect('/starchart')
+        })
+        .catch(err => console.error('error:' + err));
 })
 
 

@@ -8,12 +8,11 @@ const mongoose = require('../databases/connection')
 
 const StarChartSchema = new mongoose.Schema (
     {
-        properties: {
-                name: {
-                    title: "Name",
-                    type: String,
-                    default: "Test"
-                    },
+        name: {
+                title: "Name",
+                type: String,
+                default: "Test"
+            },
         year: {
                 title: "Year",
                 type: Number,
@@ -63,10 +62,8 @@ const StarChartSchema = new mongoose.Schema (
                 title: "Language",
                 type: String,
                 default: "EN"
-            },
-        }
-    }
-)
+            }
+        })
 
 const StarChart = mongoose.model('StarChart', StarChartSchema);
 
