@@ -1,19 +1,17 @@
-PUT http://localhost:3001/edit/6289477951030ce11405bbe8
+POST http://localhost:3001/starchart
 Content-Type: application/json
+ 
+{
+        "name": "Jaclene",
+        "year": 1990,
+        "month": 8,
+        "day": 20,
+        "hour": 15,
+        "minute": 57,
+        "longitude": 12.4963655,
+        "latitude": 41.9027835,
+        "city": "New York",
+        "timezone": "Europe/Rome",
+        "language": "EN"
 
-  {
-        "firstName": "Anne",
-        "lastName": "Test",
-        "birthday": "01/05/2013",
-        "location": "Aurora, CO",
-        "birthTime": "12:30 PM",
-        "email": "ashchweikhardwork@gmail.com",
-        "userName":   "Test",
-        "password": "Test",
-        "interests": {
-            "first": "",
-            "second": "",
-            "third": ""
-        }
-    }
-
+}
