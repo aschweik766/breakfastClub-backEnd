@@ -16,16 +16,20 @@ router.get("/", (req, res) => {
 //CREATE 
 
 //READ
-router.get("/myaccount", (req, res) => {
+router.get("/users", (req, res) => {
     const results = User.find({})
     results.then((user) => {res.send(user)})
+})
+router.get("/users/:id", (req, res) => {
+    const result = User.findById(req.params.id)
+    result.then((user) => {res.send(user)})
 })
 
 //other routes to plan//
 
 //POST
 
-router.post("/myaccount", (req, res) => {
+router.post("/users", (req, res) => {
     User.create(req.body)
     .then( () => {
         res.redirect('/myaccount')
@@ -53,7 +57,7 @@ router.post('/signup', (req, res) => {
 //UPATE
 
 
-router.put('/edit/:id', (req, res) => {
+router.put('/users/:id', (req, res) => {
     console.log(req.params.id)
     console.log(req.body)
     User.findByIdAndUpdate({_id: req.params.id}, req.body)
@@ -64,9 +68,12 @@ router.put('/edit/:id', (req, res) => {
 })
 
 
-// router.put()
+// DELETE
 
-// router.delete()
+router.delete('/myaccount/:id', (req, res) => {
+    User.findByIdAndDelete(req.params.id)
+    .catch(console.error)
+})
 
 
 

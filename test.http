@@ -1,17 +1,2 @@
-POST http://localhost:3001/starchart
+DELETE  http://localhost:3001/myaccount/628e8e76d9f75d5378f13e06
 Content-Type: application/json
- 
-{
-        "name": "Jaclene",
-        "year": 1990,
-        "month": 8,
-        "day": 20,
-        "hour": 15,
-        "minute": 57,
-        "longitude": 12.4963655,
-        "latitude": 41.9027835,
-        "city": "New York",
-        "timezone": "Europe/Rome",
-        "language": "EN"
-
-}
