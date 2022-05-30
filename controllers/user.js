@@ -13,58 +13,77 @@ router.get("/", (req, res) => {
     res.send('hello world')
 })
 
-//CREATE 
 
 //READ
 router.get("/users", (req, res) => {
     const results = User.find({})
-    results.then((user) => {res.send(user)})
+    results.then((user) => { res.send(user) })
 })
 router.get("/users/:id", (req, res) => {
     const result = User.findById(req.params.id)
-    result.then((user) => {res.send(user)})
+    result.then((user) => { res.send(user) })
 })
 
 //other routes to plan//
 
+//CREATE 
 //POST
 
 router.post("/users", (req, res) => {
     User.create(req.body)
-    .then( () => {
-        res.redirect('/myaccount')
-    })
-    .catch(console.error)
+        .then(() => {
+            res.redirect('/myaccount')
+        })
+        .catch(console.error)
 })
 
-router.post('/signup', (req, res) => {
-    const signedUpUser= new SignUp({
-        fullName: req.body.fullName,
-        username: req.body.username,
+router.post("/signup", (req, res) => {
+    const signedUpUser = new User({
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        birthday: req.body.birthday,
+        location: req.body.location,
+        birthTime: req.body.birthTime,
         email: req.body.email,
+        userName: req.body.userName,
         password: req.body.password
     })
     signedUpUser.save()
-    .then(data => {
-        res.json(data)
-    })
-    .catch(error => {
-        res.json(error)
-    })
+        .then(data => {
+            res.json(data)
+        })
+        .catch(error => {
+            res.json(error)
+        })
 })
 
+// router.post('/signup', (req, res) => {
+//     const signedUpUser= new SignUp({
+//         fullName: req.body.fullName,
+//         username: req.body.username,
+//         email: req.body.email,
+//         password: req.body.password
+//     })
+//     signedUpUser.save()
+//     .then(data => {
+//         res.json(data)
+//     })
+//     .catch(error => {
+//         res.json(error)
+//     })
+// })
 
-//UPATE
 
+//UPDATE
 
 router.put('/users/:id', (req, res) => {
     console.log(req.params.id)
     console.log(req.body)
-    User.findByIdAndUpdate({_id: req.params.id}, req.body)
-    .then(data => 
-        User.find({}).then(data => {
-            res.json(data)
-        }))
+    User.findByIdAndUpdate({ _id: req.params.id }, req.body)
+        .then(data =>
+            User.find({}).then(data => {
+                res.json(data)
+            }))
 })
 
 
@@ -72,7 +91,7 @@ router.put('/users/:id', (req, res) => {
 
 router.delete('/myaccount/:id', (req, res) => {
     User.findByIdAndDelete(req.params.id)
-    .catch(console.error)
+        .catch(console.error)
 })
 
 
