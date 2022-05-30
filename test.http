@@ -1,13 +1,3 @@
-POST http://localhost:3001/signup
+DELETE http://localhost:3001/myaccount/62952892c1448e8177b64b50
 Content-Type: application/json
-
-{
-    "firstName": "Created",
-    "lastName": "User",
-    "email": "tester@yahoo.com",
-    "userName": "createduser1",
-    "password": "createdpassword",
-    "location": "San Diego, CA",
-    "birthday": "03/31/1995",
-    "birthTime": "9:00 AM"
-}
+ 
