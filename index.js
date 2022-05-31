@@ -1,22 +1,28 @@
 const express = require("express");
-const dot = require('dotenv').config
+const app = express()
+
+const dot = require('dotenv').config()
 const cors = require('cors')
 
 const methodOverride = require('method-override')
+const userController = require('./controllers/user')
+const starchartController = require('./controllers/starchart')
 
-
-const app = express()
-
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
 app.use('/public', express.static(__dirname + 'public'))
 app.use(methodOverride('_method'))
 app.use(cors())
-app.use(express.urlencoded({extended: true}))
-app.use(express.json())
-
-const controller = require('./controllers/router')
 
 
-const port = process.env.PORT || 3000
+
+app.use(userController)
+app.use(starchartController)
+
+
+
+
+const port = process.env.PORT || 3001
 app.listen(port, ()=> {
     console.log(`server running on port: ${port}`)
 });

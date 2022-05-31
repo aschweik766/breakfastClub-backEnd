@@ -1,0 +1,2 @@
+DELETE  http://localhost:3001/myaccount/628e8e76d9f75d5378f13e06
+Content-Type: application/json
