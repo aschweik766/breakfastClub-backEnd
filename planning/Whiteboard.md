@@ -1,3 +1,27 @@
+        
+        
+        USER MODEL
+        firstName: String,
+        lastName: String,
+        DOBday: Number, < dropdown >
+        DOBmonth: Number, < dropdown >
+        DOByear: Number, < dropdown >
+        location: String,
+        email: String,
+        userName:   String,
+        password: String,
+        images: [String], < multiple photos >
+        zodiacSign: String, < dropdown >
+        datingPreferences: { nested model },
+        bio: String,
+        interests: < dropdown/ check boxes with 6 interest options >
+
+
+
+
+
+
+
 Saturday 5/21/22: 
 
 Setup backend routes, model, deploy
