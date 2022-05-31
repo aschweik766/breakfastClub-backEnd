@@ -8,24 +8,26 @@ const UserSchema = new mongoose.Schema(
     {
         firstName: String,
         lastName: String,
-        birthday: String,
+        DOBmonth: Number, 
+        DOBday: Number, 
+        DOByear: Number,        
         location: String,
-        birthTime: String,
         email: String,
-        userName:   String,
+        username:   String,
         password: String,
         image: String,
         zodiacSign: String,
-        moonRising: String,
-        sunRising: String,
-        venus: String,
-        datingPreferences: String,
+        genderIdentity: String,
+        interestedIn: [String],
+        relationshipStatus: String,
+        lookingFor: String,
         bio: String,
-        interests: {
-            first: String,
-            second: String,
-            third: String,
-        }
+        height: String,
+        weight: String,
+        interests: [String],
+        matches: [
+            {user_id: String}
+        ]
     },
     {timestamps: true}
 )
