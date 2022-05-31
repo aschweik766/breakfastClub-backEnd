@@ -93,7 +93,7 @@ Setup backend routes, model, deploy
 
     User Models
         - API fetch needs to link to user model 
-        - Will need to render/check compatibility info through user model info
+        - Will need to render/check compatibility info through user model/dating prefernces info
         - Add in true/false for Matched?
 
     Dating Preferences
