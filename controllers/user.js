@@ -74,6 +74,14 @@ router.delete('/myaccount/:id', (req, res) => {
     User.findByIdAndDelete(req.params.id)
     .catch(console.error)
 })
+//will have to update backend to matches, update User with matches, update User with messages, get user by compatability: 
+    //router.put(user/:addMatches)
+    //router.get(user/:matches)
+    //router.get(user/:compatability)
+    //router.get(user/:get-messages)
+        //{from user_id to a user_id}
+    //router.post(user/:send-message)
+
 
 
 
