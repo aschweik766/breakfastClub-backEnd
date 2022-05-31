@@ -29,24 +29,35 @@ router.get("/users/:id", (req, res) => {
 //CREATE 
 //POST
 
-router.post("/users", (req, res) => {
-    User.create(req.body)
-        .then(() => {
-            res.redirect('/myaccount')
-        })
-        .catch(console.error)
-})
+// router.post("/users", (req, res) => {
+//     User.create(req.body)
+//         .then(() => {
+//             res.redirect('/myaccount')
+//         })
+//         .catch(console.error)
+// })
 
 router.post("/signup", (req, res) => {
     const signedUpUser = new User({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
-        birthday: req.body.birthday,
+        DOBmonth: req.body.DOBmonth, 
+        DOBday: req.body.DOBday, 
+        DOByear: req.body.DOByear,
         location: req.body.location,
-        birthTime: req.body.birthTime,
         email: req.body.email,
-        userName: req.body.userName,
-        password: req.body.password
+        username: req.body.username,
+        password: req.body.password,
+        image: req.body.image,
+        zodiacSign: req.body.zodiacSign,
+        genderIdentity: req.body.genderIdentity,
+        interestedIn: req.body.interestedIn,
+        relationshipStatus: req.body.relationshipStatus,
+        lookingFor: req.body.lookingFor,
+        bio: req.body.bio,
+        height: req.body.height,
+        weight: req.body.weight,
+        interests: req.body.interests
     })
     signedUpUser.save()
         .then(data => {
