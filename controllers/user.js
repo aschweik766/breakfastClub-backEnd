@@ -108,8 +108,10 @@ router.put('/users/:id', (req, res) => {
 //updating/add matches to a user_id individual dashboard
 
 router.put('/update-matches', (req, res) => {
-    const { user_id, matchedIds } = req.body
-       const results = User.findByIdAndUpdate({_id: user_id}, {$push: {matches: {user_id: matchedIds}}})
+        const userId = req.params
+        const { user_id, matchedIds } = req.body
+        const results = User.findByIdAndUpdate({_id: user_id}, 
+        {$push: {matches: {user_id: matchedIds}}})
        results.then((user) => { res.send(user) })
     
 })
