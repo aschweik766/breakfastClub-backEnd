@@ -24,6 +24,13 @@ router.get("/users/:id", (req, res) => {
     result.then((user) => { res.send(user) })
 })
 
+
+
+router.get("/users-gender-identity", (req, res) => {
+    const result = User.find({genderIdentity: {$eq: 'Male'}})
+    result.then((user) => { res.send(user) })
+
+})
 //other routes to plan//
 
 //CREATE 
@@ -62,6 +69,7 @@ router.post("/signup", (req, res) => {
     signedUpUser.save()
         .then(data => {
             res.json(data)
+            // .then(res.status().json({userId: generatedUserId}))
         })
         .catch(error => {
             res.json(error)
@@ -97,6 +105,15 @@ router.put('/users/:id', (req, res) => {
             }))
 })
 
+
+//updating/add matches to a user_id individual dashboard
+
+router.put('/update-matches', (req, res) => {
+    const { user_id, matchedIds } = req.body
+       const results = User.findByIdAndUpdate({_id: user_id}, {$push: {matches: {user_id: matchedIds}}})
+       results.then((user) => { res.send(user) })
+    
+})
 
 // DELETE
 
