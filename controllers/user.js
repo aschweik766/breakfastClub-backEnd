@@ -37,6 +37,7 @@ router.get("/users/:id", (req, res) => {
 // })
 
 router.post("/signup", (req, res) => {
+    console.log("signup")
     const signedUpUser = new User({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
