@@ -2,7 +2,7 @@
 const express = require('express');
 
 const User = require('../models/user-model')
-// const SignUp = require('../models/signUpModel');
+
 const { request } = require('express');
 
 const router = express.Router();
