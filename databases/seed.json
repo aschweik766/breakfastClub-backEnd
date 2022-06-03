@@ -146,7 +146,7 @@
         "weight": "Toned",
         "interests": ["Breweries/Bars", "Art/Design", "Clubs"],
         "matches": [
-            {"user_id": ""}
+            {"username": ""}
         ]
     }
 ]
