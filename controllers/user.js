@@ -119,7 +119,7 @@ router.put('/users/:id', (req, res) => {
 router.put('/update-matches', async (req, res) => {
         const { loginUserId, matchedLoginId } = req.body
         try {
-            const query = { user_id: loginUserId }
+            const query = { _id: loginUserId }
             const updateMatches = { $push: { matches: { user_id: matchedLoginId }},
             }
             const user = await User.findOneAndUpdate(query, updateMatches)
