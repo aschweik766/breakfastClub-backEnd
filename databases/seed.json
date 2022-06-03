@@ -21,7 +21,7 @@
         "weight": "Fit",
         "interests": ["Sports", "Hiking", "Anime"],
         "matches": [
-            {"user_id": ""}
+            {"username": ""}
         ]
     },
     {
@@ -46,7 +46,7 @@
         "weight": "Fit",
         "interests": ["Travel", "Hiking", "Shopping"],
         "matches": [
-            {"user_id": ""}
+            {"username": ""}
         ]
     },
     {
@@ -71,7 +71,7 @@
         "weight": "Average",
         "interests": ["Pastries", "Baking", "Karoke"],
         "matches": [
-            {"user_id": ""}
+            {"username": ""}
         ]
     },
     {
@@ -96,7 +96,7 @@
         "weight": "Average",
         "interests": ["Reading", "Movies", "Gardening"],
         "matches": [
-            {"user_id": ""}
+            {"username": ""}
         ]
     },
     {
@@ -121,7 +121,7 @@
         "weight": "Average",
         "interests": ["Cooking", "Wine", "Dining"],
         "matches": [
-            {"user_id": ""}
+            {"username": ""}
         ]
     }
 ]
