@@ -3,8 +3,8 @@ const express = require('express');
 
 const User = require('../models/user-model')
 
-const { request } = require('express');
-const query = require('express/lib/middleware/query');
+// const { request } = require('express');
+// const query = require('express/lib/middleware/query');
 
 const router = express.Router();
 
@@ -101,23 +101,23 @@ router.put('/users/:id', (req, res) => {
 
 //updating/add matches to a user_id individual dashboard
 
-router.put('/update-matches', async (req, res) => {
-        const { loginUserId, matchedLoginId } = req.body
-        try {
-            const query = { user_id: loginUserId }
-            const updateMatches = { $push: { matches: { user_id: matchedLoginId }},
-            }
-            const user = await User.findOneAndUpdate(query, updateMatches)
-            res.send(user)
-        } catch {
-            console.log(error)
-        }
+// router.put('/update-matches', async (req, res) => {
+//         const { loginUserId, matchedLoginId } = req.body
+//         try {
+//             const query = { user_id: loginUserId }
+//             const updateMatches = { $push: { matches: { user_id: matchedLoginId }},
+//             }
+//             const user = await User.findOneAndUpdate(query, updateMatches)
+//             res.send(user)
+//         } catch {
+//             console.log(error)
+//         }
         
     //     const results = User.findByIdAndUpdate({_id: user_id}, 
     //     {$push: {matches: {user_id: matchedIds}}})
     //    results.then((user) => { res.send(user) })
     
-})
+// })
 
 // DELETE
 
