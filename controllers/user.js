@@ -93,11 +93,10 @@ router.put('/users/:id', (req, res) => {
     console.log(req.params.id)
     console.log(req.body)
     User.findByIdAndUpdate({ _id: req.params.id }, req.body)
-        .then(data =>
-            User.find({}).then(data => {
-                res.json(data)
-            }))
-})
+        .then((data) => res.json(data))
+        console.log("user updated")
+            })
+
 
 
 //updating/add matches to a user_id individual dashboard

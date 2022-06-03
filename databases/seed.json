@@ -123,5 +123,30 @@
         "matches": [
             {"user_id": ""}
         ]
+    },
+    {
+        "firstName": "Sean",
+        "lastName": "Randle",
+        "user_id": "seany",
+        "DOBmonth": 11, 
+        "DOBday": 18, 
+        "DOByear": 2000,
+        "location": "Atlanta, GA",
+        "email": "sean@gmail.com",
+        "username":   "seanyr",
+        "password": "sean456",
+        "zodiacSign": "Scorpio",
+        "image": "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        "genderIdentity": "Male",
+        "interestedIn": ["Women"],
+        "relationshipStatus": "Single",
+        "lookingFor": "fun",
+       "bio": "I enjoy being around my family and going out on the town.",
+        "height": "5-10",
+        "weight": "Toned",
+        "interests": ["Breweries/Bars", "Art/Design", "Clubs"],
+        "matches": [
+            {"user_id": ""}
+        ]
     }
 ]
