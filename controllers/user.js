@@ -54,6 +54,7 @@ router.get("/users-gender-identity", (req, res) => {
 // })
 
 router.post("/signup", (req, res) => {
+    console.log("signup")
     const signedUpUser = new User({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -85,22 +86,6 @@ router.post("/signup", (req, res) => {
         })
 })
 
-// router.post('/signup', (req, res) => {
-//     const signedUpUser= new SignUp({
-//         fullName: req.body.fullName,
-//         username: req.body.username,
-//         email: req.body.email,
-//         password: req.body.password
-//     })
-//     signedUpUser.save()
-//     .then(data => {
-//         res.json(data)
-//     })
-//     .catch(error => {
-//         res.json(error)
-//     })
-// })
-
 
 //UPDATE
 
@@ -108,11 +93,10 @@ router.put('/users/:id', (req, res) => {
     console.log(req.params.id)
     console.log(req.body)
     User.findByIdAndUpdate({ _id: req.params.id }, req.body)
-        .then(data =>
-            User.find({}).then(data => {
-                res.json(data)
-            }))
-})
+        .then((data) => res.json(data))
+        console.log("user updated")
+            })
+
 
 
 //updating/add matches to a user_id individual dashboard

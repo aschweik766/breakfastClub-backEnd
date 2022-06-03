@@ -1,7 +1,7 @@
-PUT http://localhost:3001/users/629a2b46e9622e717acb7ba6
+POST http://localhost:3001/signup
 Content-Type: application/json
- 
- {
+
+  {
         "firstName": "Sean",
         "lastName": "Randle",
         "user_id": "seany",
@@ -10,7 +10,7 @@ Content-Type: application/json
         "DOByear": 2000,
         "location": "Atlanta, GA",
         "email": "sean@gmail.com",
-        "username":   "seanRand",
+        "username":   "seanyr",
         "password": "sean456",
         "zodiacSign": "Scorpio",
         "image": "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
@@ -26,3 +26,4 @@ Content-Type: application/json
             {"user_id": ""}
         ]
     }
+ 
