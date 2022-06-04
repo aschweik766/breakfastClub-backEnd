@@ -36,7 +36,6 @@ router.get("/users-gender-identity", (req, res) => {
 
 })
 
-
 router.post("/signup", (req, res) => {
     console.log("signup")
     const signedUpUser = new User({
@@ -70,7 +69,6 @@ router.post("/signup", (req, res) => {
         })
 })
 
-
 //UPDATE edit profile:
 
 router.put('/users/:id', (req, res) => {
@@ -98,11 +96,13 @@ router.put('/users/:id', (req, res) => {
 
 // DELETE did work on HTTP test route with backend.
 
-router.delete('/myaccount/:id', (req, res) => {
+router.delete('/delete/:id', (req, res) => {
     User.findByIdAndDelete(req.params.id)
-        .catch(console.error)
+        .catch(error => {
+            res.json(error)
+            console.log("user has been deleted")
 })
-
+})
 
 
 module.exports = router;
