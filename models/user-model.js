@@ -26,7 +26,7 @@ const UserSchema = new mongoose.Schema(
         weight: String,
         interests: [String],
         matches: [
-            {username: String}
+            {user_id: String}
         ]
     },
     {timestamps: true}
