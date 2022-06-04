@@ -2,6 +2,8 @@ const mongoose = require('../databases/connection')
 
 const DatingPrefSchema = new mongoose.Schema(
     {
+      
+
         image: String,
         userName: String,
         firstName: String,
