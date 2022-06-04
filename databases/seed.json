@@ -21,7 +21,7 @@
         "weight": "Fit",
         "interests": ["Sports", "Hiking", "Anime"],
         "matches": [
-            {"username": ""}
+            {"user_id": ""}
         ]
     },
     {
@@ -46,7 +46,7 @@
         "weight": "Fit",
         "interests": ["Travel", "Hiking", "Shopping"],
         "matches": [
-            {"username": ""}
+            {"user_id": ""}
         ]
     },
     {
@@ -71,7 +71,7 @@
         "weight": "Average",
         "interests": ["Pastries", "Baking", "Karoke"],
         "matches": [
-            {"username": ""}
+            {"user_id": ""}
         ]
     },
     {
@@ -96,7 +96,7 @@
         "weight": "Average",
         "interests": ["Reading", "Movies", "Gardening"],
         "matches": [
-            {"username": ""}
+            {"user_id": ""}
         ]
     },
     {
@@ -121,7 +121,7 @@
         "weight": "Average",
         "interests": ["Cooking", "Wine", "Dining"],
         "matches": [
-            {"username": ""}
+            {"user_id": ""}
         ]
     },
     {
@@ -146,7 +146,7 @@
         "weight": "Toned",
         "interests": ["Breweries/Bars", "Art/Design", "Clubs"],
         "matches": [
-            {"username": ""}
+            {"user_id": ""}
         ]
     }
 ]
