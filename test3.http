@@ -1,2 +1,2 @@
-GET  http://localhost:3001/login-user/629a320ffe17f428ab68f39a
+GET  http://localhost:3001/users-gender-identity
 Content-Type: application/json
