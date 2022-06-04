@@ -5,7 +5,7 @@
 ### This application is part 1 of 2 of a full stack working MVP team project. Together as a team of 3, we developed online dating and personalized horoscope platform inspired by our own desires to connect with others in new ways. As the stars align, so can users on our Align App for a dose of daily love horoscopes and online dating.
 
 ## Link to deployed applicaiton
-### Deployed on heroku (Align Heroku Backend)[https://horoscopedatingapp-backend.herokuapp.com/users]
+### Deployed on heroku [Align Heroku Backend](https://horoscopedatingapp-backend.herokuapp.com/users)
 
 ## Development Tools 
 ### Express.js, Node.js, MongoDB, Mongoose, Astro Rapid API
