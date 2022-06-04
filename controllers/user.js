@@ -94,7 +94,7 @@ router.put('/users/:id', (req, res) => {
     console.log(req.body)
     User.findByIdAndUpdate({ _id: req.params.id }, req.body)
         .then((data) => res.json(data))
-        console.log("user updated")
+        // console.log("user updated")
             })
 
 
