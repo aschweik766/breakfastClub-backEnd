@@ -21,7 +21,7 @@
         "weight": "Fit",
         "interests": ["Sports", "Hiking", "Anime"],
         "matches": [
-            {"user_id": ""}
+            {"_id": null}
         ]
     },
     {
@@ -37,7 +37,7 @@
         "password": "tester123",
         "zodiacSign": "Cancer",
         "image": "https://cdn.pixabay.com/photo/2021/03/26/17/02/woman-6126481_960_720.jpg",
-        "genderIdentity": "Female",
+        "genderIdentity": ["Female"],
         "interestedIn": ["Men", "Women"],
         "relationshipStatus": "Single",
         "lookingFor": "dating",
@@ -46,21 +46,21 @@
         "weight": "Fit",
         "interests": ["Travel", "Hiking", "Shopping"],
         "matches": [
-            {"user_id": ""}
+            {"_id": null}
         ]
     },
     {
         "firstName": "Cena",
         "lastName": "Bermuda",
         "user_id": "test-3",
-        "DOBmonth": 1, 
+        "DOBmonth": 3, 
         "DOBday": 10, 
         "DOByear": 1996,
         "location": "New York City, NY",
         "email": "ashchweikhardwork@gmail.com",
         "username":   "cenab",
         "password": "tester123",
-        "zodiacSign": "Aquarius",
+        "zodiacSign": "Pisces",
         "image": "https://cdn.pixabay.com/photo/2019/12/09/08/14/celebrity-4682972_960_720.jpg",
         "genderIdentity": "Non-binary",
         "interestedIn": ["Men", "Women", "Non-binary"],
@@ -71,7 +71,7 @@
         "weight": "Average",
         "interests": ["Pastries", "Baking", "Karoke"],
         "matches": [
-            {"user_id": ""}
+            {"_id": null}
         ]
     },
     {
@@ -96,7 +96,7 @@
         "weight": "Average",
         "interests": ["Reading", "Movies", "Gardening"],
         "matches": [
-            {"user_id": ""}
+            {"_id": null}
         ]
     },
     {
@@ -121,21 +121,21 @@
         "weight": "Average",
         "interests": ["Cooking", "Wine", "Dining"],
         "matches": [
-            {"user_id": ""}
+            {"_id": null}
         ]
     },
     {
         "firstName": "Sean",
         "lastName": "Randle",
         "user_id": "seany",
-        "DOBmonth": 11, 
-        "DOBday": 18, 
+        "DOBmonth": 2, 
+        "DOBday": 20, 
         "DOByear": 2000,
         "location": "Atlanta, GA",
         "email": "sean@gmail.com",
         "username":   "seanyr",
         "password": "sean456",
-        "zodiacSign": "Scorpio",
+        "zodiacSign": "Pisces",
         "image": "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         "genderIdentity": "Male",
         "interestedIn": ["Women"],
@@ -146,7 +146,7 @@
         "weight": "Toned",
         "interests": ["Breweries/Bars", "Art/Design", "Clubs"],
         "matches": [
-            {"user_id": ""}
+            {"_id": null}
         ]
     }
 ]
