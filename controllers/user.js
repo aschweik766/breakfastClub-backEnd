@@ -1,4 +1,3 @@
-//User homepage: routes//
 const express = require('express');
 
 const User = require('../models/user-model')
@@ -13,7 +12,6 @@ router.get("/", (req, res) => {
     res.send('hello world')
 })
 
-
 //READ
 router.get("/users", (req, res) => {
     const results = User.find({})
@@ -25,34 +23,22 @@ router.get("/users/:id", (req, res) => {
 })
 
 
+//getting a single user by id only for login matches might user of DisplayMatchesFrontEnd, not using now.
+// router.get("/login-user/:id", (req, res) => {
+//     const result = User.findById(req.params.id)
+//     result.then((user) => { res.send(user) })
+// })
+
+
 router.get("/users-gender-identity", (req, res) => {
     const result = User.find({genderIdentity: {$eq: 'Male'}})
     result.then((user) => { res.send(user) })
 
 })
 
-// router.get("/users-gender-identity", (req, res) => {
-//     const gender = req.query.gender
-//     const query = { genderIdentity : { $eq: 'Male' } }
-
-//     const findUsersByGender = User.find(query).toArray()
-
-//     res.send(findUsersByGender)
-// })
-//other routes to plan//
-
-//CREATE 
-//POST
-
-// router.post("/users", (req, res) => {
-//     User.create(req.body)
-//         .then(() => {
-//             res.redirect('/myaccount')
-//         })
-//         .catch(console.error)
-// })
 
 router.post("/signup", (req, res) => {
+    console.log("signup")
     const signedUpUser = new User({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -84,6 +70,130 @@ router.post("/signup", (req, res) => {
         })
 })
 
+
+//UPDATE edit profile:
+
+router.put('/users/:id', (req, res) => {
+    console.log(req.params.id)
+    console.log(req.body)
+    User.findByIdAndUpdate({ _id: req.params.id }, req.body)
+        .then((data) => res.json(data))
+        console.log("user updated")
+            })
+
+//updating/add matches to a user_id individual dashboard:
+
+router.put('/update-matches', async (req, res) => {
+        const { loginUsername, matchedUsername } = req.body
+        try {
+            const query = { username: loginUsername }
+            const updateMatches = { $push: { matches: { username: matchedUsername }},
+            }
+            const user = await User.findOneAndUpdate(query, updateMatches)
+            res.send(user)
+        } catch {
+            console.log(error)
+        }
+    })
+
+// DELETE did work on HTTP test route with backend.
+
+router.delete('/myaccount/:id', (req, res) => {
+    User.findByIdAndDelete(req.params.id)
+        .catch(console.error)
+})
+
+
+
+module.exports = router;
+
+
+
+
+
+//scratch
+
+
+// router.get("/users-gender-identity", (req, res) => {
+//     const gender = req.query.gender
+//     const query = { genderIdentity : { $eq: 'Male' } }
+
+//     const findUsersByGender = User.find(query).toArray()
+
+//     res.send(findUsersByGender)
+// })
+//other routes to plan//
+
+//create post route to Signup a user:
+
+// delete tester//
+// router.delete('/myaccount/:id', (req, res) => {
+//     User.findOneAndRemove(
+//         {_id: req.params.id},
+//         )
+//         .then( () => res.redirect('/'))
+//         .catch(console.error)
+//   })
+
+
+// router.post("/users", (req, res) => {
+//     User.create(req.body)
+//         .then(() => {
+//             res.redirect('/myaccount')
+//         })
+//         .catch(console.error)
+// })
+
+
+//update/match array  tester
+
+// router.put('/update-matches/:loginUsername', (req, res) => {
+    
+//     User.findOneAndUpdate({username: req.params.loginUsername}, req.body )
+//     .then((data) => res.json(data))
+//         console.log("user matches updated.")
+// })
+
+
+// //User homepage: routes//
+// const express = require('express');
+
+// const User = require('../models/user-model')
+// const SignUp = require('../models/signUpModel');
+// const { request } = require('express');
+
+// const router = express.Router();
+
+// //CRUD ROUTES//
+
+// router.get("/", (req, res) => {
+//     res.send('hello world')
+// })
+
+// //CREATE 
+
+// //READ
+// router.get("/users", (req, res) => {
+//     const results = User.find({})
+//     results.then((user) => {res.send(user)})
+// })
+// router.get("/users/:id", (req, res) => {
+//     const result = User.findById(req.params.id)
+//     result.then((user) => {res.send(user)})
+// })
+
+// //other routes to plan//
+
+// //POST
+
+// router.post("/users", (req, res) => {
+//     User.create(req.body)
+//     .then( () => {
+//         res.redirect('/myaccount')
+//     })
+//     .catch(console.error)
+// })
+
 // router.post('/signup', (req, res) => {
 //     const signedUpUser= new SignUp({
 //         fullName: req.body.fullName,
@@ -101,20 +211,19 @@ router.post("/signup", (req, res) => {
 // })
 
 
-//UPDATE
-
-router.put('/users/:id', (req, res) => {
-    console.log(req.params.id)
-    console.log(req.body)
-    User.findByIdAndUpdate({ _id: req.params.id }, req.body)
-        .then(data =>
-            User.find({}).then(data => {
-                res.json(data)
-            }))
-})
+// //UPATE
 
 
-//updating/add matches to a user_id individual dashboard
+// router.put('/users/:id', (req, res) => {
+//     console.log(req.params.id)
+//     console.log(req.body)
+//     User.findByIdAndUpdate({_id: req.params.id}, req.body)
+//     .then(data => 
+//         User.find({}).then(data => {
+//             res.json(data)
+//         }))
+// })
+
 
 router.put('/update-matches', async (req, res) => {
         const { loginUserId, matchedLoginId } = req.body
@@ -134,19 +243,13 @@ router.put('/update-matches', async (req, res) => {
     
 })
 
-// DELETE
 
-router.delete('/myaccount/:id', (req, res) => {
-    User.findByIdAndDelete(req.params.id)
-        .catch(console.error)
-})
-//will have to update backend to matches, update User with matches, update User with messages, get user by compatability: 
-    //router.put(user/:addMatches)
-    //router.get(user/:matches)
-    //router.get(user/:compatability)
-    //router.get(user/:get-messages)
-        //{from user_id to a user_id}
-    //router.post(user/:send-message)
+// // DELETE
+
+// router.delete('/myaccount/:id', (req, res) => {
+//     User.findByIdAndDelete(req.params.id)
+//     .catch(console.error)
+// })
 
 
 
@@ -155,7 +258,7 @@ router.delete('/myaccount/:id', (req, res) => {
 
 
 
+// module.exports = router;
 
-module.exports = router;
 
 
