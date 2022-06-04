@@ -70,7 +70,6 @@ router.post("/signup", (req, res) => {
         })
 })
 
-
 //UPDATE edit profile:
 
 router.put('/users/:id', (req, res) => {
@@ -78,7 +77,7 @@ router.put('/users/:id', (req, res) => {
     console.log(req.body)
     User.findByIdAndUpdate({ _id: req.params.id }, req.body)
         .then((data) => res.json(data))
-        console.log("user updated")
+        // console.log("user updated")
             })
 
 //updating/add matches to a user_id individual dashboard:
@@ -98,11 +97,13 @@ router.put('/update-matches', async (req, res) => {
 
 // DELETE did work on HTTP test route with backend.
 
-router.delete('/myaccount/:id', (req, res) => {
+router.delete('/delete/:id', (req, res) => {
     User.findByIdAndDelete(req.params.id)
-        .catch(console.error)
+        .catch(error => {
+            res.json(error)
+            console.log("user has been deleted")
 })
-
+})
 
 
 module.exports = router;
