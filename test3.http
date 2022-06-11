@@ -1,0 +1,2 @@
+GET  http://localhost:3001/users-gender-identity
+Content-Type: application/json

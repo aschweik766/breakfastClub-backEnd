@@ -1,3 +1,27 @@
+        
+        
+        USER MODEL
+        firstName: String,
+        lastName: String,
+        DOBday: Number, < dropdown >
+        DOBmonth: Number, < dropdown >
+        DOByear: Number, < dropdown >
+        location: String,
+        email: String,
+        userName:   String,
+        password: String,
+        images: [String], < multiple photos >
+        zodiacSign: String, < dropdown >
+        datingPreferences: { nested model },
+        bio: String,
+        interests: < dropdown/ check boxes with 6 interest options >
+
+
+
+
+
+
+
 Saturday 5/21/22: 
 
 Setup backend routes, model, deploy
@@ -69,7 +93,7 @@ Setup backend routes, model, deploy
 
     User Models
         - API fetch needs to link to user model 
-        - Will need to render/check compatibility info through user model info
+        - Will need to render/check compatibility info through user model/dating prefernces info
         - Add in true/false for Matched?
 
     Dating Preferences
