@@ -10,9 +10,9 @@
 ## Development Tools 
 ### Express.js, Node.js, MongoDB, Mongoose, Astro Rapid API
 
-## Frontend Link
+## Frontend Link Deployed on Netlify
 
-[GitHub Frontend](https://github.com/aschweik766/breakfast-club-FrontEnd)
+[Align Deployed Frontend](https://peaceful-sunshine-1cdc44.netlify.app/)
 
 ## Features
 ###
